@@ -1,15 +1,9 @@
 import PropTypes from 'prop-types';
-import { PureComponent } from 'react';
 
-export class Notification extends PureComponent {
-  static propTypes = {
-    message: PropTypes.string.isRequired,
-  };
+const Notification = ({ message }) => {
+  return <p>{message}</p>;
+};
 
-  render() {
-    const { message } = this.props;
-    return <p>{message}</p>;
-  }
-}
+Notification.propTypes = { message: PropTypes.string.isRequired };
 
 export default Notification;
